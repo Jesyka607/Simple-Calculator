@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Calculator</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+               <label for=""> Enter first value</label>
+               <input type="text" id="fvalue" name="">
+            </td>
+            <td>
+                <label for=""> Enter second value</label>
+               <input type="text" id="svalue" name="">
+            </td>
+            <td>
+                <label for="">Result</label>
+                <input type="text" id="Result" name="">
+            </td>
+        </tr>
+    </table>
+    <input type="button" id="add" value="Addition" onclick="calculate(1);" name="">
+    <input type="button" id="sub" value="Subtraction" onclick="calculate(2);" name="">
+    <input type="button" id="mul" value="Multiplication" onclick="calculate(3);" name=""> 
+    <input type="button" id="div" value="Division" onclick="calculate(4);" name="">
+    <script type="text/javascript">
+        function calculate(choice) {
+            var n1 = document.getElementById('fvalue').value * 1;
+            var n2 = document.getElementById('svalue').value * 1;
+            var fresult;
+            switch(choice) {
+                case 1:
+                fresult = n1 + n2;
+                break;
+                case 2:
+                fresult = n1 - n2;
+                break;
+                case 3:
+                fresult = n1 * n2;
+                break;
+                case 4:
+                fresult = n1 / n2;
+                break;
+            }
+            document.getElementById("Result").value = fresult;
+        }
+    </script>
+</body>
+</html>
